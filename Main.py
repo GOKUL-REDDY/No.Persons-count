@@ -5,7 +5,8 @@ from keras.models import load_model
 model = load_model('cnncat2.h5')
 
 face = cv2.CascadeClassifier('/Haarcascade/haarcascades/haarcascade_profileface.xml')
-
+# NOTE:ProfileFace.xml is used for camera when its far From the students only.
+# OtherWise we can just use frontal Face.xml file.
 cap = cv2.VideoCapture(0)
 font = cv2.FONT_HERSHEY_COMPLEX_SMALL
 
@@ -30,4 +31,4 @@ while(True):
         break
     
 cap.release()
-cv2.destroyAllWindows
+cv2.destroyAllWindows()
